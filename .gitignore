@@ -1,0 +1,15 @@
+# Ignore node_modules in client and server
+client/node_modules/
+server/node_modules/
+
+# Ignore other common folders and files
+*.log
+*.env
+.vscode/
+
+# Ignore build output directories
+client/build/
+server/build/
+
+# Mac OS files
+.DS_Store
