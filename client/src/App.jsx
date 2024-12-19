@@ -1,12 +1,26 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import { Button } from './components/components/ui/button'
+import Header from './components/Header'
+import Sidebar from './components/Sidebar'
+import Seller from './pages/Seller'
+import Orders from './pages/Orders'
+import NotFound from './pages/NotFound'
 
 function App() {
 
   return (
     <>
-      <h1 className='bg-red'>Akash Amrolkar</h1>
-      <Button className=" bg-red-400"/>
+      <div className='flex'>
+        <Sidebar />
+        <div className='flex-1'>
+          <Header />
+          <Routes>
+          <Route path='/seller' element={<Seller />}/>
+          <Route path='/seller/orders' element={<Orders />}/>      
+          <Route path="*" element={<NotFound />} />      
+          </Routes>
+        </div>
+      </div>
     </>
   )
 }
