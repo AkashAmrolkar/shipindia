@@ -14,11 +14,13 @@ function App() {
         <Sidebar />
         <div className='flex-1'>
           <Header />
-          <Routes>
-          <Route path='/seller' element={<Seller />}/>
-          <Route path='/seller/orders' element={<Orders />}/>      
-          <Route path="*" element={<NotFound />} />      
-          </Routes>
+          <div className='px-4 py-3 bg-[#f0f1f7] h-full'>
+            <Routes>
+              <Route path='/seller' element={<Seller />}/>
+              <Route path='/seller/orders' element={<Orders />}/>      
+              <Route path="*" element={<NotFound />} />      
+            </Routes>
+          </div>
         </div>
       </div>
     </>

@@ -18,6 +18,9 @@ export default {
         secondary: '#96a0af',
         primary: '#00c27c'
       },
+      boxShadow: {
+        custom: "0px 0px 15px rgba(119, 119, 119, 0.063)",
+      },
     },
   },
   plugins: [tailwindcssAnimate],
