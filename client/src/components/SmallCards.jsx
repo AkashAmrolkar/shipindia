@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const SmallCards = ({props}) => {
   return (
     <div className="bg-white shadow-custom px-5 py-5 rounded-xl">

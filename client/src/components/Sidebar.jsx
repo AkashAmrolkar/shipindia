@@ -1,5 +1,5 @@
 import { Calculator, ChevronLeft, ClipboardMinus, HeartHandshake, House, LayoutDashboard, Menu, Receipt, Settings, ShieldAlert, Truck, TvMinimal, Users, Warehouse } from 'lucide-react'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.svg'
 import Avatar from '../assets/Avatar.png'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
@@ -85,8 +85,8 @@ const Sidebar = () => {
     <div className="bg-white border-r border-gray-300 overflow-y-auto sticky top-0 h-screen">
       <div className=" px-8 py-5">
         <div className='relative flex items-center justify-center' style={show}>
-          <img src={`${logo}`} height='35' width='90' alt="logo" loading="lazy"/>
-          <span className='absolute top-3 right-0' onClick={handleCloseMenu}>
+          <img src={`${logo}`} className='w-[180px]' alt="logo" loading="lazy"/>
+          <span className='absolute top-2 right-0' onClick={handleCloseMenu}>
             <ChevronLeft />
           </span>
         </div>
