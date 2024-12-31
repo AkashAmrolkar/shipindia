@@ -20,7 +20,7 @@ const RegisterForm = () => {
         {/* First Name */}
         <div>
             <label htmlFor="firstName" className="block text-sm font-medium text-gray-400 mb-2">
-            First Name
+            First Name*
             </label>
             <input
             type="text"
@@ -38,7 +38,7 @@ const RegisterForm = () => {
         {/* Last Name */}
         <div>
             <label htmlFor="lastName" className="block text-sm font-medium text-gray-400 mb-2">
-            Last Name
+            Last Name*
             </label>
             <input
             type="text"
@@ -56,7 +56,7 @@ const RegisterForm = () => {
         {/* Email */}
         <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
-            Email
+            Email*
             </label>
             <input
             type="email"
@@ -80,7 +80,7 @@ const RegisterForm = () => {
         {/* Mobile Number */}
         <div>
             <label htmlFor="mobileNumber" className="block text-sm font-medium text-gray-400 mb-2">
-            Mobile Number
+            Mobile Number*
             </label>
             <input
             type="tel"
@@ -104,7 +104,7 @@ const RegisterForm = () => {
         {/* Company Name */}
         <div>
             <label htmlFor="companyName" className="block text-sm font-medium text-gray-400 mb-2">
-            Company Name
+            Company Name*
             </label>
             <input
             type="text"
@@ -122,7 +122,7 @@ const RegisterForm = () => {
         {/* Orders */}
         <div>
             <label htmlFor="orders" className="block text-sm font-medium text-gray-400 mb-2">
-            How many orders you will ship?
+            How many orders you will ship?*
             </label>
             <select
             id="orders"
@@ -144,7 +144,7 @@ const RegisterForm = () => {
         {/* Password */}
         <div>
             <label htmlFor="password" className="block text-sm font-medium text-gray-400 mb-2">
-            Password
+            Password*
             </label>
             <input
             type="password"
@@ -168,7 +168,7 @@ const RegisterForm = () => {
         {/* Confirm Password */}
         <div>
             <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-400 mb-2">
-            Confirm Password
+            Confirm Password*
             </label>
             <input
             type="password"

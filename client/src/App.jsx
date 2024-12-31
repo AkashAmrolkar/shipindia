@@ -7,6 +7,7 @@ import SingleOrder from './pages/SingleOrder'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import DashboardLayout from './components/DashboardLayout'
+import Kyc from './pages/Kyc'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/register' element={<Register />}/>
         <Route element={<DashboardLayout />}>
           <Route path='/seller' element={<Seller />}/>
+          <Route path='/seller/kyc' element={<Kyc />}/>
           <Route path='/seller/orders' element={<Orders />}/> 
           <Route path='/seller/orders/addorders/singleorder' element={<SingleOrder />}/>      
           <Route path="*" element={<NotFound />} />  
