@@ -6,7 +6,7 @@ import VerifyKycModal from './VerifyKycModal'
 const DashboardLayout = () => {
   const location = useLocation();
   return (
-    <div className='flex'>
+    <div className='flex relative'>
         <Sidebar />
         <div className='flex-1'>
             <Header />

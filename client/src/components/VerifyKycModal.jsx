@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import Kycverify from '../assets/Kyc-verify.png'
 const VerifyKycModal = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-custom p-5 flex md:justify-between flex-wrap items-center mb-5">
+    <div className="bg-white rounded-2xl shadow-custom p-5 flex md:justify-between flex-wrap items-center gap-16 mb-5">
         <div className="flex flex-col gap-5">
             <h2 className="font-bold text-2xl">Complete your KYC</h2>
             <p className="text-base">KYC is Mandatory For Account Activation.</p>

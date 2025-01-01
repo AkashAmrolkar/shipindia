@@ -158,7 +158,7 @@ const Seller = () => {
   ]
   return (
     <div className="flex flex-col gap-5">
-      <div className="flex gap-4 items-center">
+      <div className="flex flex-wrap gap-4 items-center">
         {
           buttons?.map((button)=>{
             return (
@@ -194,7 +194,7 @@ const Seller = () => {
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col gap-4 rounded-2xl bg-white px-5 py-5">
+      <div className="flex-1 flex flex-col gap-4 rounded-2xl bg-white">
         {
           shippingDetails?.map((details)=>{
             return(

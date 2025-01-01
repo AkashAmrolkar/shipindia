@@ -1,3 +1,4 @@
+import BankDetails from "@/components/form/BankDetails"
 import CompanyInfoForm from "@/components/form/CompanyInfoForm"
 import KycForm from "@/components/form/KycForm"
 import { useState } from "react"
@@ -31,7 +32,7 @@ const Kyc = () => {
         </div>
           {activeTab === "kyc" && <KycForm />}
           {activeTab === "companyInfo" && <CompanyInfoForm />}
-          {/* {activeTab === "bankDetails" && <BankDetailsForm />} */}
+          {activeTab === "bankDetails" && <BankDetails />}
     </div>
   )
 }

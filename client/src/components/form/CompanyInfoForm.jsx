@@ -50,6 +50,9 @@ const CompanyInfoForm = () => {
                                 className={`w-full p-3 border rounded-lg text-sm bg-white outline-primary outline-[1px] ${errors.firstName ? "border-red-500" : "border-gray-300"
                                     } shadow-sm`}
                             />
+                            {errors.firstName && (
+                            <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>
+                            )}
                         </div>
                         <div>
                             <label htmlFor="lastName" className="text-sm font-medium text-gray-400 mb-2">Last Name*</label>
@@ -60,6 +63,9 @@ const CompanyInfoForm = () => {
                                 className={`w-full p-3 border rounded-lg text-sm bg-white outline-primary outline-[1px] ${errors.lastName ? "border-red-500" : "border-gray-300"
                                     } shadow-sm`}
                             />
+                            {errors.lastName && (
+                            <p className="text-red-500 text-sm mt-1">{errors.lastName.message}</p>
+                            )}
                         </div>
                         <div>
                             <label htmlFor="email" className="text-sm font-medium text-gray-400 mb-2">Email*</label>
@@ -70,6 +76,9 @@ const CompanyInfoForm = () => {
                                 className={`w-full p-3 border rounded-lg text-sm bg-white outline-primary outline-[1px] ${errors.email ? "border-red-500" : "border-gray-300"
                                     } shadow-sm`}
                             />
+                            {errors.email && (
+                            <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                            )}
                         </div>
                         <div>
                             <label htmlFor="mobileNumber" className="text-sm font-medium text-gray-400 mb-2">Mobile Number*</label>
@@ -80,6 +89,9 @@ const CompanyInfoForm = () => {
                                 className={`w-full p-3 border rounded-lg text-sm bg-white outline-primary outline-[1px] ${errors.mobileNumber ? "border-red-500" : "border-gray-300"
                                     } shadow-sm`}
                             />
+                            {errors.mobileNumber && (
+                            <p className="text-red-500 text-sm mt-1">{errors.mobileNumber.message}</p>
+                            )}
                         </div>
                         <div>
                             <label htmlFor="firmName" className="text-sm font-medium text-gray-400 mb-2">Firm Name*</label>
@@ -90,6 +102,9 @@ const CompanyInfoForm = () => {
                                 className={`w-full p-3 border rounded-lg text-sm bg-white outline-primary outline-[1px] ${errors.firmName ? "border-red-500" : "border-gray-300"
                                     } shadow-sm`}
                             />
+                            {errors.firmName && (
+                            <p className="text-red-500 text-sm mt-1">{errors.firmName.message}</p>
+                            )}
                         </div>
                         <div>
                             <label htmlFor="parent" className="text-sm font-medium text-gray-400 mb-2">S/O or D/O*</label>
@@ -100,6 +115,9 @@ const CompanyInfoForm = () => {
                                 className={`w-full p-3 border rounded-lg text-sm bg-white outline-primary outline-[1px] ${errors.parent ? "border-red-500" : "border-gray-300"
                                     } shadow-sm`}
                             />
+                            {errors.parent && (
+                            <p className="text-red-500 text-sm mt-1">{errors.parent.message}</p>
+                            )}
                         </div>
                         <div>
                             <label htmlFor="age" className="text-sm font-medium text-gray-400 mb-2">Age*</label>
@@ -110,6 +128,9 @@ const CompanyInfoForm = () => {
                                 className={`w-full p-3 border rounded-lg text-sm bg-white outline-primary outline-[1px] ${errors.age ? "border-red-500" : "border-gray-300"
                                     } shadow-sm`}
                             />
+                            {errors.age && (
+                            <p className="text-red-500 text-sm mt-1">{errors.age.message}</p>
+                            )}
                         </div>
                         <div>
                             <label htmlFor="website" className="text-sm font-medium text-gray-400 mb-2">Website</label>
@@ -131,6 +152,9 @@ const CompanyInfoForm = () => {
                             <textarea id="address"  rows="10" {...register('address', { required: 'Address is required' })}
                                 className={`w-full p-3 border rounded-lg text-sm bg-white outline-primary outline-[1px] ${errors.address ? "border-red-500" : "border-gray-300"
                                     } shadow-sm`} />
+                                    {errors.address && (
+                                    <p className="text-red-500 text-sm mt-1">{errors.address.message}</p>
+                                    )}
                         </div>
                         <div className="col-span-2">
                             <div className="grid md:grid-cols-2 gap-5">
@@ -139,11 +163,14 @@ const CompanyInfoForm = () => {
                                     <input
                                         type="text"
                                         id="pincode"
-                                        {...register('pincode', { required: 'Pincode is required', pattern: { value: /^[0-9]{10}$/, message: "Mobile number must be 6 digits" } })}
+                                        {...register('pincode', { required: 'Pincode is required', pattern: { value: /^[0-9]{6}$/, message: "Mobile number must be 6 digits" } })}
                                         onChange={handlePincodeChange}
                                         className={`w-full p-3 border rounded-lg text-sm bg-white outline-primary outline-[1px] ${errors.pincode ? "border-red-500" : "border-gray-300"
                                             } shadow-sm`}
                                     />
+                                    {errors.pincode && (
+                                    <p className="text-red-500 text-sm mt-1">{errors.pincode.message}</p>
+                                    )}
                                 </div>
                                 <div>
                                     <label htmlFor="locality" className="text-sm font-medium text-gray-400 mb-2">Locality*</label>
@@ -238,6 +265,9 @@ const CompanyInfoForm = () => {
                             <textarea id="officeAddress"  rows="10" {...register('officeAddress', { required: 'Address is required' })}
                                 className={`w-full p-3 border rounded-lg text-sm bg-white outline-primary outline-[1px] ${errors.officeAddress ? "border-red-500" : "border-gray-300"
                                     } shadow-sm`} />
+                                    {errors.officeAddress && (
+                                    <p className="text-red-500 text-sm mt-1">{errors.officeAddress.message}</p>
+                                    )}
                         </div>
                         <div className="col-span-2">
                             <div className="grid md:grid-cols-2 gap-5">
@@ -246,18 +276,21 @@ const CompanyInfoForm = () => {
                                     <input
                                         type="text"
                                         id="officePincode"
-                                        {...register('officePincode', { required: 'Pincode is required', pattern: { value: /^[0-9]{10}$/, message: "Mobile number must be 6 digits" } })}
+                                        {...register('officePincode', { required: 'Pincode is required', pattern: { value: /^[0-9]{6}$/, message: "Mobile number must be 6 digits" } })}
                                         onChange={handlePincodeChange}
                                         className={`w-full p-3 border rounded-lg text-sm bg-white outline-primary outline-[1px] ${errors.officePincode ? "border-red-500" : "border-gray-300"
                                             } shadow-sm`}
                                     />
+                                    {errors.officePincode && (
+                                    <p className="text-red-500 text-sm mt-1">{errors.officePincode.message}</p>
+                                    )}
                                 </div>
                                 <div>
                                     <label htmlFor="officeLocality" className="text-sm font-medium text-gray-400 mb-2">Locality*</label>
                                     <select
                                         type="text"
                                         id="officeLocality"
-                                        {...register('officeLocality', { required: 'locality is required', pattern: { value: /^[0-9]{10}$/, message: "Mobile number must be 6 digits" } })}
+                                        {...register('officeLocality', { required: 'locality is required',})}
                                         className={`w-full p-3 border rounded-lg text-sm bg-white outline-primary outline-[1px] ${errors.officeLocality ? "border-red-500" : "border-gray-300"
                                             } shadow-sm`}
                                     >

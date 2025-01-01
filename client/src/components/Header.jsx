@@ -1,8 +1,13 @@
-import { Bell, LogOut, Search, Settings, Zap } from "lucide-react"
+import { Bell, LogOut, Menu, Search, Settings, X, Zap } from "lucide-react"
 import avatar from '../assets/Avatar.png'
+import logo from '../assets/logo.svg'
 import { Link } from "react-router-dom"
 import { useState, useEffect, useRef } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { openSidebar, closeSidebar } from "../store/sidebarSlice"
 const Header = () => {
+  const dispatch = useDispatch()  
+  const isMobileSidebarOpen = useSelector((state)=>state.sidebarReducer.isMobileSidebarOpen)
   const [showProfile, setShowProfile] = useState(false)
   const profileRef = useRef(null);
 
@@ -24,13 +29,28 @@ const Header = () => {
   }, []);
 
   return (
-    <div className=" p-4 bg-white border-b border-gray-200 flex justify-between items-center sticky top-0">
-      <div className="font-medium text-black text-xl">Dashboard</div>
-      <div className="flex gap-8 relative items-center">
-        <div>
-
+    <div className=" p-4 bg-white border-b border-gray-200 flex justify-between items-center sticky z-20 top-0">
+      <div className="font-medium text-black text-xl hidden md:block">Dashboard</div>
+      <div className="flex gap-4 md:gap-8 relative items-center">
+        <div className="md:hidden">
+          {
+            !isMobileSidebarOpen &&
+            <button onClick={()=>dispatch(openSidebar())}>
+              <Menu />
+            </button>
+          }
+          
+          {
+            isMobileSidebarOpen &&
+            <button onClick={()=>dispatch(closeSidebar())}>
+              <X />
+            </button>
+          }
         </div>
-        <div className="flex gap-3">
+        <div className="md:hidden">
+          <img src={`${logo}`} className='w-[200px]' alt="logo" loading="lazy" />
+        </div>
+        <div className="gap-3 hidden md:flex">
           <Zap />
           <span>Recharge Wallet</span>
         </div>

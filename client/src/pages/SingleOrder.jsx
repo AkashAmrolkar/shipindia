@@ -3,7 +3,6 @@ import * as Yup from "yup";
 import { useForm, FormProvider } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import BuyerDetails from "@/components/form/BuyerDetails";
-import PickupAddress from "@/components/form/PickupAddress";
 
 const SingleOrder = () => {
     const [step, setStep] = useState(1);
@@ -13,18 +12,11 @@ const SingleOrder = () => {
         mobileNumber: Yup.string().required("Mobile Number is required"),
         email: Yup.string().email("Invalid Email").required("Email is required"),
     });
-    const picupAddressSchema = Yup.object({
-        buyerName: Yup.string().required("Buyer Name is required"),
-        mobileNumber: Yup.string().required("Mobile Number is required"),
-        email: Yup.string().email("Invalid Email").required("Email is required"),
-    });
     
     const getStepSchema = (step) => {
         switch (step) {
           case 1:
             return buyerDetailsSchema;
-          case 2:
-            return picupAddressSchema;
           default:
             return buyerDetailsSchema;
         }
@@ -56,7 +48,6 @@ const SingleOrder = () => {
     <FormProvider {...methods}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <BuyerDetails />
-        <PickupAddress />
       </form>
     </FormProvider>
   )
