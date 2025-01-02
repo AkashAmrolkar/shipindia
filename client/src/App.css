@@ -2,15 +2,14 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .kycTabList li:not(:last-child)::before{
     position: absolute;
     content: '';
     height: 1px;
-    width: 500px;
+    width: 100%;
     background: #96a0af;
     top: 20px;
-    left: 50px;
+    left: 20px;
     z-index: auto;
 }
