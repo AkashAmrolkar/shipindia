@@ -1,9 +1,9 @@
-.kycTabList li{
+.kycTabList li, .orderProgress li{
     position: relative;
     display: flex;
     flex-direction: column;
 }
-.kycTabList li:not(:last-child)::before{
+.kycTabList li:not(:last-child)::before, .orderProgress li:not(:last-child)::before{
     position: absolute;
     content: '';
     height: 1px;
@@ -12,4 +12,7 @@
     top: 20px;
     left: 20px;
     z-index: auto;
+}
+.orderProgress li:not(:last-child)::before{
+    left: 40px;
 }

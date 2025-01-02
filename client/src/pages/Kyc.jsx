@@ -15,25 +15,25 @@ const Kyc = () => {
             <li className=" cursor-pointer z-10 flex-1" id="kyc" onClick={handleTab}>
               <div className="flex flex-col w-fit items-center">
                 <p className={`count mb-3 text-center  font-medium z-10  content-center rounded-full h-10 w-10  border-[1px] text-black ${activeTab==='kyc'? 'bg-primary border-primary':'bg-secondary border-secondary'}`}>1</p>
-                <p className={`text-center font-medium ${activeTab==='kyc'?'text-primary': 'text-secondary'}`}>KYC</p>
+                <p className={`text-center hidden md:block font-medium ${activeTab==='kyc'?'text-primary': 'text-secondary'}`}>KYC</p>
               </div>
             </li>
             <li className=" cursor-pointer z-10 flex-1" id="companyInfo" onClick={handleTab}>
               <div className="flex flex-col w-fit items-center">
                 <p className={`count mb-3 text-center  font-medium z-10  content-center rounded-full h-10 w-10  border-[1px] text-black ${activeTab==='companyInfo'? 'bg-primary border-primary':'bg-secondary border-secondary'}`}>2</p>
-                <p className={`text-center font-medium ${activeTab==='companyInfo'?'text-primary': 'text-secondary'}`}>Company Info</p>
+                <p className={`text-center hidden md:block font-medium ${activeTab==='companyInfo'?'text-primary': 'text-secondary'}`}>Company Info</p>
               </div>
             </li>
             <li className=" cursor-pointer z-10 flex-1" id="bankDetails" onClick={handleTab}>
               <div className="flex flex-col w-fit items-center">
                 <p className={`count mb-3 text-center  font-medium z-10  content-center rounded-full h-10 w-10  border-[1px] text-black ${activeTab==='bankDetails'? 'bg-primary border-primary':'bg-secondary border-secondary'}`}>3</p>
-                <p className={`text-center font-medium ${activeTab==='bankDetails'?'text-primary': 'text-secondary'}`}>Bank Details</p>
+                <p className={`text-center hidden md:block font-medium ${activeTab==='bankDetails'?'text-primary': 'text-secondary'}`}>Bank Details</p>
               </div>
             </li>
             <li className=" cursor-pointer z-10" id="agreement" onClick={handleTab}>
               <div className="flex flex-col w-fit items-center">
                 <p className={`count mb-3 text-center  font-medium z-10  content-center rounded-full h-10 w-10  border-[1px] text-black ${activeTab==='agreement'? 'bg-primary border-primary':'bg-secondary border-secondary'}`}>4</p>
-                <p className={`text-center font-medium ${activeTab==='agreement'?'text-primary': 'text-secondary'}`}>Agreement</p>
+                <p className={`text-center hidden md:block font-medium ${activeTab==='agreement'?'text-primary': 'text-secondary'}`}>Agreement</p>
               </div>
             </li>
           </ul>
