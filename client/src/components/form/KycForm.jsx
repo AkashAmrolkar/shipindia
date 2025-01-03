@@ -102,7 +102,7 @@ const KycForm = () => {
                         })}
                         className={`w-full p-3 border rounded-lg text-sm bg-white outline-primary outline-[1px] ${ errors.panFile ? "border-red-500" : "border-gray-300"} shadow-sm`}
                     />
-                    {errors.file && (
+                    {errors.panFile && (
                         <p className="text-red-500 text-sm mt-1">{errors.panFile.message}</p>
                     )}
                 </div>

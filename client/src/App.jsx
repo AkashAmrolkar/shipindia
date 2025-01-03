@@ -10,6 +10,8 @@ import DashboardLayout from './components/DashboardLayout'
 import Kyc from './pages/Kyc'
 import PicupAddresses from './pages/PicupAddresses'
 import PickupAddress from './components/form/PickupAddress'
+import BulkOrder from './pages/BulkOrder'
+import B2BOrder from './pages/B2BOrder'
 
 function App() {
   return (
@@ -21,7 +23,9 @@ function App() {
           <Route path='/seller' element={<Seller />}/>
           <Route path='/seller/kyc' element={<Kyc />}/>
           <Route path='/seller/orders' element={<Orders />}/> 
-          <Route path='/seller/orders/addorders/singleorder' element={<SingleOrder />}/> 
+          <Route path='/seller/orders/addorders/singleorder' element={<SingleOrder />}/>
+          <Route path='/seller/orders/addorders/bulk-order' element={<BulkOrder />}/> 
+          <Route path='/seller/orders/addorders/b2b-order' element={<B2BOrder />}/> 
           <Route path='/seller/settings/pickup-addresses' element={<PicupAddresses />}/>
           <Route path='/seller/settings/pickup-addresses/form' element={<PickupAddress />}/>
           <Route path="*" element={<NotFound />} />  

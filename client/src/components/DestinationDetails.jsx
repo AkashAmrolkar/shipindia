@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useFormContext } from "react-hook-form";
 
-const PickupDetils = () => {
+const DestinationDetails = () => {
   const { register } = useFormContext();
   const [addresses] = useState([
     { id: 1, name: "Akash Amrolkar", email: 'akas@gmail.com', mobileNumber: '8380863314', address: "Chandgad", city: "Kolhapur", state: "Maharashtra", country: "India", pincode: "416508" },
@@ -14,14 +14,13 @@ const PickupDetils = () => {
     const selectedAddress = addresses.find((addr) => addr.id === selectedId);
     setSelectedAddr(selectedAddress)
   };
-  //console.log(selectedAddr)
   return (
     <div className="px-5 py-10 bg-white shadow-custom rounded-3xl">
       <div className="grid md:grid-cols-6 gap-5">
         {/* Address Selection */}
         <div className="md:col-span-3">
           <label htmlFor="selectedAddress" className="block text-sm font-medium text-gray-400 mb-2">
-            Select Pickup Address
+            Select Destination Address
           </label>
           <select
             id="selectedAddress"
@@ -51,4 +50,4 @@ const PickupDetils = () => {
   )
 }
 
-export default PickupDetils
+export default DestinationDetails
